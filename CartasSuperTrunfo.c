@@ -35,6 +35,12 @@ int main() {
     Comando para registro do nome da cidade.
     */
 
+    printf("Digite a população da cidade: ");
+    int populacao1;
+    scanf("%d", &populacao1);
+    /* Comando para registrar a população da cidade.
+    */
+
     printf("Área (km²): ");
     float area1;
     scanf("%f", &area1);
@@ -75,6 +81,10 @@ int main() {
     char cidade2[50];
     scanf("%s", cidade2);
 
+    printf("Digite a população da cidade: ");
+    int populacao2;
+    scanf("%d", &populacao2);
+
     printf("Área (km²): ");
     float area2;
     scanf("%f", &area2);
@@ -98,6 +108,7 @@ int main() {
     printf("Estado: %c\n", estado1);
     printf("Código: %c%s\n", estado1, codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
+    printf("População: %dM\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$%.2f bi\n", pib1);
     printf("Pontos Turísticos: %d\n", pontosTuristicos1);
@@ -106,6 +117,7 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código: %c%s\n", estado2, codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
+    printf("População: %dM\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$%.2f bi\n", pib2);
     printf("Pontos Turísticos: %d\n", pontosTuristicos2);
