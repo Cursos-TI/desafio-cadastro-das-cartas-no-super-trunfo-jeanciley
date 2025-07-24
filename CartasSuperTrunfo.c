@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
 
@@ -21,7 +22,7 @@ int main() {
 
     printf("Digite o código da carta (um número de 01 a 04): %c", estado1);
     char codigo1[4];
-    scanf("%s", codigo1);
+    scanf("%2s", codigo1);
     /*
     Comando para registar o código da carta.
     exemplo: 
@@ -30,7 +31,9 @@ int main() {
 
     printf("Digite o nome da cidade: ");
     char cidade1[50];
-    scanf("%49s", cidade1);
+    scanf(" "); // limpa qualquer caractere pendente, como '\n'
+    fgets(cidade1, sizeof(cidade1), stdin);
+    cidade1[strcspn(cidade1, "\n")] = 0; //comando para remover o '\n' do final da string, assim ele não deixa uma linha em branco.
     /*
     Comando para registro do nome da cidade.
     */
@@ -79,7 +82,9 @@ int main() {
 
     printf("Digite o nome da cidade: ");
     char cidade2[50];
-    scanf("%s", cidade2);
+    scanf(" "); // limpa qualquer caractere pendente, como '\n'
+    fgets(cidade2, sizeof(cidade2), stdin);
+    cidade2[strcspn(cidade2, "\n")] = 0;
 
     printf("Digite a população da cidade: ");
     int populacao2;
@@ -108,7 +113,7 @@ int main() {
     printf("Estado: %c\n", estado1);
     printf("Código: %c%s\n", estado1, codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
-    printf("População: %dM\n", populacao1);
+    printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$%.2f bi\n", pib1);
     printf("Pontos Turísticos: %d\n", pontosTuristicos1);
@@ -117,7 +122,7 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código: %c%s\n", estado2, codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
-    printf("População: %dM\n", populacao2);
+    printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$%.2f bi\n", pib2);
     printf("Pontos Turísticos: %d\n", pontosTuristicos2);
