@@ -65,6 +65,19 @@ int main() {
     Comando para registro dos pontos turísticos da cidade.
     */
 
+    float denspop1;
+    denspop1 = populacao1 / area1;
+    /*
+    Calculo da densidade populacional da carta cadastrada
+    */
+
+    float pibperc1;
+    double pibinteiro1 = pib1 * 1000000000;
+    pibperc1 = (float)(pibinteiro1 / populacao1);
+    /*
+    Cálculo do PIB per Capita da carta cadastrada
+    */
+
     printf("\nCARTA CADASTRADA COM SUCESSO!\n");
 
     printf("CADASTRANDO A SEGUNDA CARTA\n");
@@ -102,6 +115,13 @@ int main() {
     int pontosTuristicos2;
     scanf("%d", &pontosTuristicos2);
 
+    float denspop2;
+    denspop2 = populacao2 / area2;
+
+    float pibperc2;
+    double pibinteiro2 = pib2 * 1000000000;
+    pibperc2 = (float)(pibinteiro2 / populacao2);
+
     printf("\nCARTA CADASTRADA COM SUCESSO!\n");
 
     /*
@@ -117,6 +137,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$%.2f bi\n", pib1);
     printf("Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", denspop1);
+    printf("PIB per Capita: R$ %.2f\n", pibperc1);
 
     printf("Carta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -126,6 +148,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$%.2f bi\n", pib2);
     printf("Pontos Turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", denspop2);
+    printf("PIB per Capita: R$ %.2f\n", pibperc2);
 
     return 0;
 }
