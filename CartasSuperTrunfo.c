@@ -20,7 +20,7 @@ int main() {
     C - Santa Catarina
     */
 
-    printf("Digite o código da carta (um número de 01 a 04): %c", estado1);
+    printf("Digite o código da carta (um número de 01 a 04): ");
     char codigo1[10];
     scanf("%2s", codigo1);
     /*
@@ -89,7 +89,7 @@ int main() {
     char estado2;
     scanf(" %c", &estado2);
 
-    printf("Digite o código da carta (um número de 01 a 04): %c", estado2);
+    printf("Digite o código da carta (um número de 01 a 04): ");
     char codigo2[10];
     scanf("%2s", codigo2);
 
