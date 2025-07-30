@@ -21,7 +21,7 @@ int main() {
     */
 
     printf("Digite o código da carta (um número de 01 a 04): %c", estado1);
-    char codigo1[4];
+    char codigo1[10];
     scanf("%2s", codigo1);
     /*
     Comando para registar o código da carta.
@@ -90,7 +90,7 @@ int main() {
     scanf(" %c", &estado2);
 
     printf("Digite o código da carta (um número de 01 a 04): %c", estado2);
-    char codigo2[4];
+    char codigo2[10];
     scanf("%2s", codigo2);
 
     printf("Digite o nome da cidade: ");
