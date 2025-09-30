@@ -1,8 +1,11 @@
 #include <stdio.h>
-#include <string.h>
+
+// Desafio Super Trunfo - Países
+// Tema 2 - Comparação das Cartas
+// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
+// Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-
     printf("Bem-vindo ao Super Trunfo Desafio Novato!\n");
     printf("CADASTRANDO A PRIMEIRA CARTA\n");
     /*
@@ -31,9 +34,8 @@ int main() {
 
     printf("Digite o nome da cidade: ");
     char cidade1[50];
-    scanf(" "); // limpa qualquer caractere pendente, como '\n'
+    getchar(); // limpa qualquer caractere pendente, como '\n'
     fgets(cidade1, sizeof(cidade1), stdin);
-    cidade1[strcspn(cidade1, "\n")] = 0; //comando para remover o '\n' do final da string, assim ele não deixa uma linha em branco.
     /*
     Comando para registro do nome da cidade.
     */
@@ -100,9 +102,8 @@ int main() {
 
     printf("Digite o nome da cidade: ");
     char cidade2[50];
-    scanf(" "); // limpa qualquer caractere pendente, como '\n'
+    getchar(); // limpa qualquer caractere pendente, como '\n'
     fgets(cidade2, sizeof(cidade2), stdin);
-    cidade2[strcspn(cidade2, "\n")] = 0;
 
     printf("Digite a população da cidade: ");
     unsigned int populacao2;
@@ -164,6 +165,8 @@ int main() {
     printf("PIB per Capita: R$ %.2f\n", pibperc2);
     printf("Super Poder: %u\n", superpoder2);
 
+    //Comparação das cartas e exibição do vencedor de cada categoria
+
     printf("COMPARAÇÃO DAS CARTAS:\n");
     printf("População: ");
     if ((populacao1 > populacao2) == 1) {
@@ -190,7 +193,7 @@ int main() {
         printf("Carta 2 venceu!\n");
     }
     printf("Densidade Populacional: ");
-    if ((denspop1 > denspop2) == 1) {
+    if ((denspop1 < denspop2)) { // Aqui, menor densidade é melhor
         printf("Carta 1 venceu!\n");
     } else {
         printf("Carta 2 venceu!\n");
